@@ -7,7 +7,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-model Receita {
+model Loja {
   id    Int     @default(autoincrement()) @id
   name      String
   instructions String
@@ -16,20 +16,20 @@ model Receita {
   servings  Int
   image     String
   feito     Boolean
-  ingredientes ReceitaIngrediente[]
+  carros CarroLoja[]
 }
 
-model Ingrediente {
+model Carro {
   id    Int     @default(autoincrement()) @id
   nome  String
-  receitas ReceitaIngrediente[]
+  loja CarroLoja[]
 }
 
-model ReceitaIngrediente {
-  receita     Receita @relation(fields: [receitaId], references: [id])
-  receitaId   Int
-  ingrediente Ingrediente @relation(fields: [ingredienteId], references: [id])
-  ingredienteId Int
+model CarroLoja {
+  loja     Loja @relation(fields: [lojaId], references: [id])
+  lojaId   Int
+  carro Carro @relation(fields: [carroId], references: [id])
+  carroId Int
   quantidade  Int
-  @@id([receitaId, ingredienteId])
+  @@id([lojaId, carroId])
 }
