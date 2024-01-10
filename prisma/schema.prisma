@@ -9,7 +9,7 @@ generator client {
 
 model Loja {
   id    Int     @default(autoincrement()) @id
-  name      String
+  morada      String
   instructions String
   prepTime  String
   cookTime  String
