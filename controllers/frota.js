@@ -1,21 +1,21 @@
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-// Método para obter todas as lojas
-exports.getAllLojas = async (req, res) => {
+// Método para obter todos os carros na frota
+exports.getAllCarros = async (req, res) => {
     try {
-        const response = await prisma.loja.findMany();
+        const response = await prisma.carro.findMany();
         res.status(200).json(response);
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error', msg: error.message });
     }
 };
 
-// Método para obter uma loja pelo ID
-exports.getLojaById = async (req, res) => {
+// Método para obter um carro pelo ID
+exports.getCarroById = async (req, res) => {
     const id = req.params.id;
     try {
-        const response = await prisma.loja.findUnique({
+        const response = await prisma.carro.findUnique({
             where: {
                 id: Number(id),
             },
@@ -23,54 +23,58 @@ exports.getLojaById = async (req, res) => {
         if (response) {
             res.status(200).json(response);
         } else {
-            res.status(404).json({ error: 'Not Found', msg: 'Loja not found' });
+            res.status(404).json({ error: 'Not Found', msg: 'Car not found' });
         }
     } catch (error) {
         res.status(500).json({ error: 'Internal Server Error', msg: error.message });
     }
 };
 
-// Método para criar uma nova loja
-exports.createLoja = async (req, res) => {
-    const { nome, endereco } = req.body;
+// Método para criar um novo carro na frota
+exports.createCarro = async (req, res) => {
+    const { modelo, categoria, preco, lojaId } = req.body;
     try {
-        const loja = await prisma.loja.create({
+        const carro = await prisma.carro.create({
             data: {
-                nome: nome,
-                endereco: endereco,
+                modelo: modelo,
+                categoria: categoria,
+                preco: preco,
+                lojaId: lojaId,
             },
         });
-        res.status(201).json(loja);
+        res.status(201).json(carro);
     } catch (error) {
         res.status(400).json({ error: 'Bad Request', msg: error.message });
     }
 };
 
-// Método para atualizar uma loja pelo ID
-exports.updateLoja = async (req, res) => {
-    const { nome, endereco } = req.body;
+// Método para atualizar um carro na frota pelo ID
+exports.updateCarro = async (req, res) => {
+    const { modelo, categoria, preco, lojaId } = req.body;
     const id = req.params.id;
     try {
-        const loja = await prisma.loja.update({
+        const carro = await prisma.carro.update({
             where: {
                 id: Number(id),
             },
             data: {
-                nome: nome,
-                endereco: endereco,
+                modelo: modelo,
+                categoria: categoria,
+                preco: preco,
+                lojaId: lojaId,
             },
         });
-        res.status(200).json(loja);
+        res.status(200).json(carro);
     } catch (error) {
         res.status(400).json({ error: 'Bad Request', msg: error.message });
     }
 };
 
-// Método para excluir uma loja pelo ID
-exports.deleteLoja = async (req, res) => {
+// Método para excluir um carro na frota pelo ID
+exports.deleteCarro = async (req, res) => {
     const id = req.params.id;
     try {
-        await prisma.loja.delete({
+        await prisma.carro.delete({
             where: {
                 id: Number(id),
             },

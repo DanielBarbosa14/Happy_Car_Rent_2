@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
-const lojasRouter = require('./categorias');
-const frotaRouter = require('./manutencoes');
+const lojasRouter = require('./lojas');
+const frotaRouter = require('./frota');
 
 router.use('/lojas', lojasRouter);
 router.use('/frota', frotaRouter);

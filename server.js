@@ -1,22 +1,45 @@
-require('dotenv').config();
-
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const express = require('express');
-
-const router = require('./routes/index');
-
+const bodyParser = require('body-parser');
 const app = express();
+const port = 3000;
+
+// Middleware para processar JSON
 app.use(bodyParser.json());
-app.use(cors());
 
-app.use('/api/', router);
+// Simulação de dados das lojas
+const lojas = [
+  { id: '1', nome: 'Loja A', endereco: 'Endereço da Loja A' },
+  { id: '2', nome: 'Loja B', endereco: 'Endereço da Loja B' },
+  // Adicione mais dados conforme necessário
+];
 
-const port = process.env.SERVER_PORT || 8080;
-app.listen(port, () => {
-    console.log('Express server listening on port', port)
+// Rota para obter dados das lojas
+app.get('/lojas', (req, res) => {
+  res.json(lojas);
 });
 
-app.get('/', (req, res) => {
-    res.status(200).json("Hello world!");
-})
+// Simulação de dados da frota
+const frota = [
+  { id: '1', modelo: 'Carro A', categoria: 'Utilitário', preco: 50 },
+  { id: '2', modelo: 'Carro B', categoria: 'SUV', preco: 70 },
+  // Adicione mais dados conforme necessário
+];
+
+// Rota para obter dados da frota com base nos filtros
+app.get('/frota', (req, res) => {
+  const { loja } = req.query;
+
+  if (loja) {
+    // Filtrar por loja, simulação
+    const carrosFiltrados = frota.filter(carro => carro.loja === loja);
+    res.json(carrosFiltrados);
+  } else {
+    // Sem filtro de loja, retorna toda a frota
+    res.json(frota);
+  }
+});
+
+// Inicializar o servidor
+app.listen(port, () => {
+  console.log(`Servidor rodando em http://localhost:${port}`);
+});
