@@ -8,28 +8,33 @@ generator client {
 }
 
 model Loja {
-  id    Int     @default(autoincrement()) @id
-  morada      String
-  instructions String
-  prepTime  String
-  cookTime  String
-  servings  Int
-  image     String
-  feito     Boolean
-  carros CarroLoja[]
+  id         Int         @id @default(autoincrement())
+  name       String
+  address    String
+  imagem     String
+  descricao  String
+  email      String
+  telefone   Int
+  carrosLoja CarroLoja[]
 }
 
-model Carro {
-  id    Int     @default(autoincrement()) @id
-  nome  String
-  loja CarroLoja[]
+model Frota {
+  id          Int         @id @default(autoincrement())
+  marca       String
+  modelo      String
+  descricao   String
+  informacao  String
+  precodiario Int
+  imagem      String
+  carrosLoja  CarroLoja[]
 }
 
 model CarroLoja {
-  loja     Loja @relation(fields: [lojaId], references: [id])
-  lojaId   Int
-  carro Carro @relation(fields: [carroId], references: [id])
+  id      Int   @id @default(autoincrement())
+  lojaId  Int
   carroId Int
-  quantidade  Int
-  @@id([lojaId, carroId])
+  loja    Loja  @relation(fields: [lojaId], references: [id])
+  carro   Frota @relation(fields: [carroId], references: [id])
+
+  @@unique([lojaId, carroId])
 }
