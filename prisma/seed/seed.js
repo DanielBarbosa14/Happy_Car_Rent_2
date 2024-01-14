@@ -9,7 +9,7 @@ async function main() {
       address: 'Endereço A',
       imagem: 'https://www.cm-viana-castelo.pt/wp-content/uploads/2023/07/DJI_0529-scaled.jpg',
       descricao: 'Loja localizada no centro de Viana do Castelo',
-      email: 'happynewcar.viana@happynewcar.pt',
+      email: 'happycarrent@gmail.com',
       telefone: 258800700,
       carrosLoja: {
         create: [
