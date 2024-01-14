@@ -9,7 +9,7 @@ generator client {
 
 model Loja {
   id         Int         @id @default(autoincrement())
-  name       String
+  nome       String
   descricao  String
   technicalData String
   imagem     String
@@ -19,7 +19,7 @@ model Loja {
 
 model Frota {
   id          Int         @id @default(autoincrement())
-  mome      String
+  nome      String
   descricao   String
   technicalData String
   imagem      String
