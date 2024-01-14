@@ -9,22 +9,19 @@ generator client {
 
 model Loja {
   id         Int         @id @default(autoincrement())
-  name       String
-  address    String
-  imagem     String
+  nome       String
   descricao  String
-  email      String
-  telefone   Int
+  technicalData String
+  imagem     String
+
   carrosLoja CarroLoja[]
 }
 
 model Frota {
   id          Int         @id @default(autoincrement())
-  marca       String
-  modelo      String
+  nome      String
   descricao   String
-  informacao  String
-  precodiario Int
+  technicalData String
   imagem      String
   carrosLoja  CarroLoja[]
 }
