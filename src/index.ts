@@ -10,7 +10,7 @@ app.use(express.json())
 
 app.get('/lojas', async (req, res) => {
     try {
-      const lojas = await prisma.loja.findMany({
+      const lojas = await prisma.Loja.findMany({
         include: {
           carrosLoja: {
             include: {
