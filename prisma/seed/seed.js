@@ -66,6 +66,99 @@ async function main() {
           },
         },
             ],
+            data: [{
+              name: 'Lisboa',
+              description: 'Morada: Estrada da Serra da Mira Lote 12 - Loja Dta. 2700-786 Amadora',
+              technicalData: 'Empresa de aluguer de carros desde 2003',
+              image: 'https://forbespt.fra1.digitaloceanspaces.com/wp-content/uploads/2021/06/23071356/lisboa-1.jpg',
+              carrosLoja: {
+                create: [
+                  {
+                    carro: {
+                      create: {
+                        nome: '',
+                        descricao: '',
+                        technicalData: '',
+                        imagem: '',
+                      },
+                    },
+                  },
+                  {
+                    carro: {
+                      create: {
+                        nome: '',
+                        descricao: '',
+                        technicalData: '',
+                        imagem: '',
+                      },
+                    },
+                  },
+                ],
+              },
+            },
+                ],
+                data: [{
+                  name: 'Coimbra',
+                  description: 'Morada: Rua do Mainho Cruzamento Sargento-Mor, 3020-832 Souselas',
+                  technicalData: 'Empresa de aluguer de carros desde 1983',
+                  image: 'https://www.civitatis.com/f/portugal/coimbra/coimbra-m.jpg',
+                  carrosLoja: {
+                    create: [
+                      {
+                        carro: {
+                          create: {
+                            nome: '',
+                            descricao: '',
+                            technicalData: '',
+                            imagem: '',
+                          },
+                        },
+                      },
+                      {
+                        carro: {
+                          create: {
+                            nome: '',
+                            descricao: '',
+                            technicalData: '',
+                            imagem: '',
+                          },
+                        },
+                      },
+                    ],
+                  },
+                },
+                    ],
+                    data: [{
+                      name: 'Leiria',
+                      description: 'Morada: IC2 KM 129 - BoaVista 2420 - 381 Leiria ',
+                      technicalData: 'Empresa de aluguer de carros desde 2007',
+                      image: 'https://eurotrip.com.br/wp-content/uploads/2020/04/leiria-portugal.jpg',
+                      carrosLoja: {
+                        create: [
+                          {
+                            carro: {
+                              create: {
+                                nome: '',
+                                descricao: '',
+                                technicalData: '',
+                                imagem: '',
+                              },
+                            },
+                          },
+                          {
+                            carro: {
+                              create: {
+                                nome: '',
+                                descricao: '',
+                                technicalData: '',
+                                imagem: '',
+                              },
+                            },
+                          },
+                        ],
+                      },
+                    },
+                        ],
     include: {
       carrosLoja: {
         include: {
