@@ -76,20 +76,20 @@ async function main() {
                   {
                     carro: {
                       create: {
-                        nome: '',
-                        descricao: '',
-                        technicalData: '',
-                        imagem: '',
+                        nome: 'Audi A4',
+                        descricao: 'Linhas elegantes e contornos distintos que caracterizam o design da marca Audi, Grade dianteira trapezoidal e elementos de iluminação LED para uma identidade visual forte, Design aerodinâmico para otimizar a eficiência de combustível e melhorar o desempenho em altas velocidades, Acabamentos refinados, detalhes cromados e jantes de liga leve para um toque de sofisticação',
+                        technicalData: 'Opções de motores a gasolina ou diesel, com diferentes níveis de potência, Aceleração, velocidade máxima e eficiência de combustível dependendo da configuração do motor, Opções de transmissão automática ou manual, dependendo da preferência e configuração, Variantes com tração dianteira ou integral (Quattro) dependendo da configuração escolhida',
+                        imagem: 'https://cf-cdn-v5.audi.at/media/GalleryThumbnails_Slider_Image_Component/72903-761229-slider-470189/dh-1460-a9ad28/d4657f1a/1685948687/1920x1080-aa4-l-191004-oe.jpg',
                       },
                     },
                   },
                   {
                     carro: {
                       create: {
-                        nome: '',
-                        descricao: '',
-                        technicalData: '',
-                        imagem: '',
+                        nome: 'Chevrolet Onix Plus',
+                        descricao: 'Linhas contemporâneas e design aerodinâmico que refletem a identidade moderna da Chevrolet, Grade frontal atraente, faróis distintivos e detalhes cromados para um visual marcante, Dimensões compactas para facilitar a condução urbana, sem comprometer a elegância',
+                        technicalData: 'Motores eficientes em termos de combustível, oferecendo uma combinação de desempenho e economia, Opções de transmissão automática ou manual, dependendo da preferência e configuração, Aceleração, velocidade máxima e eficiência de combustível adaptadas para atender às necessidades urbanas e rodoviárias',
+                        imagem: 'https://t.ctcdn.com.br/ttMiIkufJ9iruWRsKnvSbCajM6k=/1200x675/smart/i624421.jpeg',
                       },
                     },
                   },
@@ -107,20 +107,20 @@ async function main() {
                       {
                         carro: {
                           create: {
-                            nome: '',
-                            descricao: '',
-                            technicalData: '',
-                            imagem: '',
+                            nome: 'Honda City',
+                            descricao: 'Linhas modernas e design elegante que representam a estética característica da Honda, Grade frontal distintiva, faróis afilados e detalhes aerodinâmicos, Design compacto para manobras fáceis na cidade, sem comprometer a funcionalidade',
+                            technicalData: 'Motores otimizados para desempenho e eficiência de combustível, Opções de transmissão automática ou manual, dependendo da configuração escolhida, Aceleração, velocidade máxima e eficiência de combustível adaptados às necessidades urbanas e rodoviárias',
+                            imagem: 'https://upload.wikimedia.org/wikipedia/commons/1/1f/0_Honda_City_%287th_generation%29_sedan.jpg',
                           },
                         },
                       },
                       {
                         carro: {
                           create: {
-                            nome: '',
-                            descricao: '',
-                            technicalData: '',
-                            imagem: '',
+                            nome: 'Fiat Grand Siena',
+                            descricao: 'Linhas modernas e design sólido que define a presença do Fiat Grand Siena, Detalhes aerodinâmicos e estilizados para uma estética atraente, Design compacto e funcional para facilitar a condução urbana e maximizar a eficiência de espaço',
+                            technicalData: 'Motores otimizados para proporcionar equilíbrio entre desempenho e eficiência de combustível, Opções de transmissão manual ou automática, dependendo da configuração escolhida, Aceleração, velocidade máxima e eficiência de combustível adaptados às características do veículo',
+                            imagem: 'https://uploads.vrum.com.br/2022/08/74438a8a-fiat-grand-siena-modelo-2020-com-kit-gnv-vermelho-de-frente-no-asfalto.jpg',
                           },
                         },
                       },
@@ -138,20 +138,20 @@ async function main() {
                           {
                             carro: {
                               create: {
-                                nome: '',
-                                descricao: '',
-                                technicalData: '',
-                                imagem: '',
+                                nome: 'Mercedes-Benz C-Class',
+                                descricao: 'Estilo distintivo com a assinatura da Mercedes-Benz, combinando elegância e esportividade, Grade frontal marcante, linhas fluidas e detalhes cromados para uma presença luxuosa, Contornos aerodinâmicos para otimizar a eficiência e melhorar o desempenho',
+                                technicalData: 'Motores potentes e eficientes, proporcionando uma combinação de desempenho e economia, Opções de transmissão automática de várias velocidades para uma condução suave, Aceleração rápida, velocidade máxima e sistemas de suspensão adaptativa para desempenho dinâmico, Possíveis opções híbridas para eficiência energética e baixas emissões',
+                                imagem: 'https://www.mercedes-benz.pt/content/dam/hq/passengercars/cars/c-class/c-class-saloon-w206-pi/modeloverview/06-2022/images/mercedes-benz-c-class-w206-modeloverview-696x392-06-2022.png',
                               },
                             },
                           },
                           {
                             carro: {
                               create: {
-                                nome: '',
-                                descricao: '',
-                                technicalData: '',
-                                imagem: '',
+                                nome: '2024 Mazda CX-5',
+                                descricao: 'Estilo moderno e distintivo, Detalhes aerodinâmicos para eficiência e apelo visual, Possíveis atualizações na grade, faróis e outros elementos de design',
+                                technicalData: 'Motores eficientes e potentes, Opções de transmissão automática ou manual, Desempenho adaptado para eficiência e experiência de condução',
+                                imagem: 'https://media.ed.edmunds-media.com/mazda/cx-5/2024/oem/2024_mazda_cx-5_4dr-suv_25-carbon-turbo_fq_oem_1_1600.jpg',
                               },
                             },
                           },
