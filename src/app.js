@@ -54,11 +54,11 @@ app.get('/frota', async (req, res) => {
     let carros;
 
     if (loja) {
-      carros = await prisma.carro.findMany({
+      carros = await prisma.frota.findMany({
         where: { loja: loja },
       });
     } else {
-      carros = await prisma.carro.findMany();
+      carros = await prisma.frota.findMany();
     }
 
     res.json(carros);
